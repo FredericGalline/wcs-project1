@@ -98,10 +98,10 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
-    lastName: "",
-    sexe: "",
-    bio: "Envoyé par JS !!!!!",
+    name: "Frédéric",
+    lastName: "Galliné",
+    sexe: "Homme",
+    bio: "",
     phone: "",
     city: "",
     github: "",
@@ -112,18 +112,18 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
-    lastName: "",
-    sexe: "",
-    bio: "Envoyé par JS !!!!!",
-    phone: "",
-    city: "",
-    github: "",
-    slack: "",
-    discord: "",
-    whatsapp: "",
+    name: "Karine",
+    lastName: "RANDY",
+    sexe: "Femme",
+    bio: "Je ne veux pas participer à ce modèle de société qui a donné à l'argent plus d'importance qu'à la vie. Je suis ici-bas pour vivre, je ne suis pas ici pour augmenter le produit national brut.",
+    phone: "0622742925",
+    city: "Eyragues",
+    github: "https://github.com/Samikate",
+    slack: "Samikate",
+    discord: "Samikate",
+    whatsapp: "Karine RANDY",
     twitter: "",
-    userFacebook: "",
+    userFacebook: "Karine randy",
   },
   {
     name: "",
@@ -133,7 +133,7 @@ let users = [
     phone: "",
     city: "",
     github: "",
-    slack: "",
+    slack: "Fanny Bononi",
     discord: "",
     whatsapp: "",
     twitter: "",
@@ -214,7 +214,7 @@ for (let i = 0; i < users.length; i++) {
           </div>
           <div class="content">
             <div class="icon">
-              <a href="${users[i].github}"><i class="fa-brands fa-github"></i></a>
+              <a href="${users[i].github}" target="_blank"><i class="fa-brands fa-github"></i></a>
               <a href="${users[i].facebook}"><i class="fa-brands fa-facebook"></i></a>
               <a href="${users[i].twitter}"><i class="fa-brands fa-twitter"></i></a>
               <a href="${users[i].instagram}"><i class="fa-brands fa-instagram"></i></a>
@@ -227,5 +227,5 @@ for (let i = 0; i < users.length; i++) {
   `;
 }
 
-document.getElementById("cards").innerHTML = `${cards}`;
+document.getElementById("cards").innerHTML = cards;
 console.log(cards);
