@@ -108,7 +108,7 @@ let users = [
     slack: "",
     discord: "",
     whatsapp: "",
-    twitter: "",
+    twitter: "@fred",
     userFacebook: "",
   },
   {
@@ -214,13 +214,41 @@ for (let i = 0; i < users.length; i++) {
           </div>
           <div class="content">
             <div class="icon">
-              <a href="${users[i].github}" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a href="${users[i].facebook}"><i class="fa-brands fa-facebook"></i></a>
-              <a href="${users[i].twitter}"><i class="fa-brands fa-twitter"></i></a>
-              <a href="${users[i].instagram}"><i class="fa-brands fa-instagram"></i></a>
-              <a href="${users[i].discord}"><i class="fa-brands fa-discord"></i></a>
-              <a href="${users[i].slack}"><i class="fa-brands fa-slack"></i></a>
-              <a href="${users[i].whatsapp}"><i class="fa-brands fa-whatsapp"></i></a>
+              ${
+                users[i].github
+                  ? '<a href="${users[i].github}" target="_blank"><i class="fa-brands fa-github"></i></a>'
+                  : ""
+              }
+              ${
+                users[i].facebook
+                  ? '<a href="${users[i].facebook}"><i class="fa-brands fa-facebook"></i></a>'
+                  : ""
+              }
+              ${
+                users[i].twitter
+                  ? '<a href="${users[i].twitter}"><i class="fa-brands fa-twitter"></i></a>'
+                  : ""
+              }
+              ${
+                users[i].instagram
+                  ? '<a href="${users[i].instagram}"><i class="fa-brands fa-instagram"></i></a>'
+                  : ""
+              }
+              ${
+                users[i].discord
+                  ? '<a href="${users[i].discord}"><i class="fa-brands fa-discord"></i></a>'
+                  : ""
+              }
+              ${
+                users[i].slack
+                  ? '<a href="${users[i].slack}"><i class="fa-brands fa-slack"></i></a>'
+                  : ""
+              }
+              ${
+                users[i].whatsapp
+                  ? '<a href="${users[i].whatsapp}"><i class="fa-brands fa-whatsapp"></i></a>'
+                  : ""
+              }
             </div>
           </div>
       </div>
