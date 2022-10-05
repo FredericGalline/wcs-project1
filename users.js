@@ -1,7 +1,3 @@
-//{userName:"", userLastName:"", userBio:"", userPhone:"", userCity:"", userGithub:"", userSlack:"", userDiscord:"", userWhatsapp:"", userTwitter:"", userFacebook:""}
-
-//function cards() {
-
 let users = [
   {
     name: "Sabine",
@@ -233,4 +229,3 @@ for (let i = 0; i < users.length; i++) {
 
 document.getElementById("cards").innerHTML = `${cards}`;
 console.log(cards);
-//}
