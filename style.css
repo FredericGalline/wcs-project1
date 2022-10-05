@@ -108,6 +108,10 @@ section#cards .card {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between
 }
 
 div.card:hover {
@@ -119,6 +123,8 @@ div.card:hover {
   display: flex;
   background-color: #fff;
   border-radius: 5px 5px 0 0;
+  height: auto;
+  align-self: stretch;
 }
 
 div.image {
@@ -146,14 +152,17 @@ div.card img {
   border-radius: 50px;
   height: 50px;
   width: 50px;
+  border: 2px rgb(255, 255, 255) solid;
 }
 
-div.card .content {
+.card .content {
   background-color: rgba(255, 255, 255, 0.019);
   padding: 10px;
   border-radius: 0 0 5px 5px;
   backdrop-filter: blur(3px);
   box-shadow: inset 0 -3px 20px rgba(255, 255, 255, 0.047), 0 0 0 0px;
+  align-self: flex-end;
+  width: 92%;
 }
 
 div .icon {

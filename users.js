@@ -2,6 +2,7 @@ let users = [
   {
     name: "Sabine",
     lastName: "Bertoneri",
+    picture:""
     sexe: "",
     bio: "",
     phone: "",
@@ -16,6 +17,7 @@ let users = [
   {
     name: "Adrien",
     lastName: "Sergent",
+    picture:""
     sexe: "",
     bio: "El Professor !",
     phone: "",
@@ -30,6 +32,7 @@ let users = [
   {
     name: "Sandra",
     lastName: "Taboada",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -44,6 +47,7 @@ let users = [
   {
     name: "Aline",
     lastName: "TaboadaSonza - Reorda",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -58,6 +62,7 @@ let users = [
   {
     name: "Christophe",
     lastName: "Mortreux",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -72,6 +77,7 @@ let users = [
   {
     name: "Eric",
     lastName: "Rouviere",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -84,8 +90,9 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
+    name: "vide",
     lastName: "",
+    picture:""
     sexe: "",
     bio: "", //petit slogan en une phrase
     phone: "",
@@ -100,6 +107,7 @@ let users = [
   {
     name: "Frédéric",
     lastName: "Galliné",
+    picture:""
     sexe: "Homme",
     bio: "",
     phone: "",
@@ -114,6 +122,7 @@ let users = [
   {
     name: "Karine",
     lastName: "RANDY",
+    picture:""
     sexe: "Femme",
     bio: "Je ne veux pas participer à ce modèle de société qui a donné à l'argent plus d'importance qu'à la vie. Je suis ici-bas pour vivre, je ne suis pas ici pour augmenter le produit national brut.",
     phone: "0622742925",
@@ -126,8 +135,9 @@ let users = [
     userFacebook: "Karine randy",
   },
   {
-    name: "",
+    name: "vide",
     lastName: "",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -140,8 +150,9 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
+    name: "vide",
     lastName: "",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -154,8 +165,9 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
+    name: "vide",
     lastName: "",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -168,8 +180,9 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
+    name: "vide",
     lastName: "",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -182,8 +195,9 @@ let users = [
     userFacebook: "",
   },
   {
-    name: "",
+    name: "vide",
     lastName: "",
+    picture:""
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -204,7 +218,7 @@ for (let i = 0; i < users.length; i++) {
   cards += `
     <div class="card">
           <div class="header">
-            <div class="image">
+            <div class="image jaune bleu">
               <img src="./img/user.png" />
             </div>
             <div class="userInfo">
