@@ -6,6 +6,7 @@ let users = [
   {
     name: "Sabine",
     lastName: "Bertoneri",
+    sexe: "",
     bio: "",
     phone: "",
     city: "",
@@ -19,6 +20,7 @@ let users = [
   {
     name: "Adrien",
     lastName: "Sergent",
+    sexe: "",
     bio: "El Professor !",
     phone: "",
     city: "",
@@ -32,6 +34,7 @@ let users = [
   {
     name: "Sandra",
     lastName: "Taboada",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -45,6 +48,7 @@ let users = [
   {
     name: "Aline",
     lastName: "TaboadaSonza - Reorda",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -58,6 +62,7 @@ let users = [
   {
     name: "Christophe",
     lastName: "Mortreux",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -71,6 +76,7 @@ let users = [
   {
     name: "Eric",
     lastName: "Rouviere",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -84,6 +90,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "", //petit slogan en une phrase
     phone: "",
     city: "",
@@ -97,6 +104,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -110,6 +118,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -123,6 +132,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -136,6 +146,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -149,6 +160,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -162,6 +174,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -175,6 +188,7 @@ let users = [
   {
     name: "",
     lastName: "",
+    sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -186,6 +200,8 @@ let users = [
     userFacebook: "",
   },
 ];
+
+/****** On affiche les cartes */
 
 let cards = "";
 for (let i = 0; i < users.length; i++) {
