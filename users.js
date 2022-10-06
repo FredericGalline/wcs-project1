@@ -2,7 +2,7 @@ let users = [
   {
     name: "Sabine",
     lastName: "Bertoneri",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "",
     phone: "",
@@ -17,7 +17,7 @@ let users = [
   {
     name: "Adrien",
     lastName: "Sergent",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "El Professor !",
     phone: "",
@@ -32,7 +32,7 @@ let users = [
   {
     name: "Sandra",
     lastName: "Taboada",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -47,7 +47,7 @@ let users = [
   {
     name: "Aline",
     lastName: "TaboadaSonza - Reorda",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -62,7 +62,7 @@ let users = [
   {
     name: "Christophe",
     lastName: "Mortreux",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -77,7 +77,7 @@ let users = [
   {
     name: "Eric",
     lastName: "Rouviere",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -92,7 +92,7 @@ let users = [
   {
     name: "vide",
     lastName: "",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "", //petit slogan en une phrase
     phone: "",
@@ -107,7 +107,7 @@ let users = [
   {
     name: "Frédéric",
     lastName: "Galliné",
-    picture:""
+    picture: "",
     sexe: "Homme",
     bio: "",
     phone: "",
@@ -122,7 +122,7 @@ let users = [
   {
     name: "Karine",
     lastName: "RANDY",
-    picture:""
+    picture: "",
     sexe: "Femme",
     bio: "Je ne veux pas participer à ce modèle de société qui a donné à l'argent plus d'importance qu'à la vie. Je suis ici-bas pour vivre, je ne suis pas ici pour augmenter le produit national brut.",
     phone: "0622742925",
@@ -135,15 +135,45 @@ let users = [
     userFacebook: "Karine randy",
   },
   {
-    name: "vide",
+    name: "Fontaine",
+    lastName: "geoffroy",
+    picture: "",
+    sexe: "Homme",
+    bio: "geek for ever", //petit slogan en une phrase
+    phone: "0698047213",
+    city: "Nice",
+    github: "https://github.com/geoffont",
+    slack: "Geoffroy Fontaine",
+    discord: "geoffroy",
+    whatsapp: "",
+    twitter: "",
+    userFacebook: "geoffroy fontaine",
+  },
+  {
+    name: "Munoz",
+    lastName: "Jerome",
+    picture: "",
+    sexe: "Homme",
+    bio: "Merci la vie",
+    phone: "0781855626",
+    city: "AVIGNON",
+    github: "https://github.com/jejem8430",
+    slack: "Jéjé Munoz",
+    discord: "jejem8430",
+    whatsapp: "Jerome Munoz",
+    twitter: "https://twitter.com/Gerom84000",
+    userFacebook: "Jerome Munoz",
+  },
+  {
+    name: "Fanny",
     lastName: "",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
     github: "",
-    slack: "Fanny Bononi",
+    slack: "https://app.slack.com/client/U041KENGNH4/treads",
     discord: "",
     whatsapp: "",
     twitter: "",
@@ -152,7 +182,7 @@ let users = [
   {
     name: "vide",
     lastName: "",
-    picture:""
+    picture: "",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -167,37 +197,7 @@ let users = [
   {
     name: "vide",
     lastName: "",
-    picture:""
-    sexe: "",
-    bio: "Envoyé par JS !!!!!",
-    phone: "",
-    city: "",
-    github: "",
-    slack: "",
-    discord: "",
-    whatsapp: "",
-    twitter: "",
-    userFacebook: "",
-  },
-  {
-    name: "vide",
-    lastName: "",
-    picture:""
-    sexe: "",
-    bio: "Envoyé par JS !!!!!",
-    phone: "",
-    city: "",
-    github: "",
-    slack: "",
-    discord: "",
-    whatsapp: "",
-    twitter: "",
-    userFacebook: "",
-  },
-  {
-    name: "vide",
-    lastName: "",
-    picture:""
+    picture: "./img/test.jpg",
     sexe: "",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -219,7 +219,9 @@ for (let i = 0; i < users.length; i++) {
     <div class="card">
           <div class="header">
             <div class="image jaune bleu">
-              <img src="./img/user.png" />
+              <img src="${
+                users[i].picture ? users[i].picture : "./img/user.png"
+              }" />
             </div>
             <div class="userInfo">
               <h2>${users[i].name} <span>${users[i].lastName} </span></h2>
@@ -230,37 +232,51 @@ for (let i = 0; i < users.length; i++) {
             <div class="icon">
               ${
                 users[i].github
-                  ? '<a href="${users[i].github}" target="_blank"><i class="fa-brands fa-github"></i></a>'
+                  ? '<a href="' +
+                    users[i].github +
+                    '" target="_blank"><i class="fa-brands fa-github"></i></a>'
                   : ""
               }
               ${
                 users[i].facebook
-                  ? '<a href="${users[i].facebook}"><i class="fa-brands fa-facebook"></i></a>'
+                  ? '<a href="' +
+                    users[i].facebook +
+                    '" target="_blank"><i class="fa-brands fa-facebook"></i></a>'
                   : ""
               }
               ${
                 users[i].twitter
-                  ? '<a href="${users[i].twitter}"><i class="fa-brands fa-twitter"></i></a>'
+                  ? '<a href="' +
+                    users[i].twitter +
+                    '" target="_blank"><i class="fa-brands fa-twitter"></i></a>'
                   : ""
               }
               ${
                 users[i].instagram
-                  ? '<a href="${users[i].instagram}"><i class="fa-brands fa-instagram"></i></a>'
+                  ? '<a href="' +
+                    users[i].instagram +
+                    '" target="_blank"><i class="fa-brands fa-instagram"></i></a>'
                   : ""
               }
               ${
                 users[i].discord
-                  ? '<a href="${users[i].discord}"><i class="fa-brands fa-discord"></i></a>'
+                  ? '<a href="' +
+                    users[i].discord +
+                    '" target="_blank"><i class="fa-brands fa-discord"></i></a>'
                   : ""
               }
               ${
                 users[i].slack
-                  ? '<a href="${users[i].slack}"><i class="fa-brands fa-slack"></i></a>'
+                  ? '<a href="' +
+                    users[i].slack +
+                    '" target="_blank"><i class="fa-brands fa-slack"></i></a>'
                   : ""
               }
               ${
                 users[i].whatsapp
-                  ? '<a href="${users[i].whatsapp}"><i class="fa-brands fa-whatsapp"></i></a>'
+                  ? '<a href="' +
+                    users[i].whatsapp +
+                    '" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>'
                   : ""
               }
             </div>
