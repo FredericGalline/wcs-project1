@@ -27,8 +27,14 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
   margin: auto;
-  width: var(--body-lg-width);
+  width: 100%;
+  background-color: #0d0d0d;
+  z-index: 1;
 }
 
 main,
@@ -55,32 +61,80 @@ h2 {
 
 /*** Navigation ***/
 nav {
-  /*background-color: #0d0d0d;*/
   color: #bfcdd9;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: row-reverse;
   position: sticky;
-  width: 100%;
   height: 3rem;
+  width: var(--body-lg-width);
 }
 
-nav.menu {
+nav .menu {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: var(--body-lg-width);
 }
 
 nav .menu .logo {
+  justify-self: start;
   font-size: 2rem;
   margin-right: 20px;
 }
 
-nav .menu .items {
-  font-size: 1rem;
+nav .menu .burger {
+  justify-self: end;
+  font-size: 1.4rem;
   align-self: center;
   justify-content: center;
+}
+
+nav .menu .burger:hover {
+  color: #777777;
+}
+
+nav .menu .burger:active {
+  color: #8e2323;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+nav .menuItems {
+  display: none;
+  justify-self: flex-end;
+  background-color: #0d0d0d;
+  width: 200px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  animation: fadeIn 1s;
+}
+
+nav .menuItems li {
+  list-style-type: none;
+  line-height: 1.4rem;
+}
+
+nav .menuItems li a{
+  text-decoration: none;
+  color: rgb(191, 191, 191);
+}
+
+nav .menuItems li a:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 section .title {
@@ -101,17 +155,17 @@ section#cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2%;
+  padding: 0px;
 }
 
 section#cards .card {
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 2%;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between
 }
 
 div.card:hover {
@@ -241,7 +295,7 @@ footer {
     padding: 2%;
   }
 
-  section.cards {
+  section#cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2%;
@@ -315,7 +369,7 @@ footer {
     opacity: 60%;
   }
 
-  section.cards {
+  section#cards {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0 2%;
