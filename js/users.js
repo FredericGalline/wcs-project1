@@ -3,7 +3,7 @@ let users = [
     name: "Frédéric",
     lastName: "Leschira",
     picture: "",
-    exe: "",
+    sexe: "M",
     bio: "Il faut viser la lune, parce qu'au moins, si vous échouez, vous finirez dans les étoiles - Oscar Wilde", //petit slogan en une phrase
     phone: "0610025866",
     city: "BEAUCAIRE 30300",
@@ -19,7 +19,7 @@ let users = [
     name: "Adrien",
     lastName: "Sergent",
     picture: "",
-    sexe: "",
+    sexe: "M",
     bio: "El Professor !",
     phone: "",
     city: "",
@@ -35,7 +35,7 @@ let users = [
     name: "Sandra",
     lastName: "Taboada",
     picture: "",
-    sexe: "",
+    sexe: "F",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -51,7 +51,7 @@ let users = [
     name: "Aline",
     lastName: "Sonza-Reorda",
     picture: "",
-    sexe: "",
+    sexe: "F",
     bio: "Envoyé par JS !!",
     phone: "",
     city: "",
@@ -64,7 +64,7 @@ let users = [
     facebook: "",
   },
   {
-    name: "Cristophe",
+    name: "Christophe",
     lastName: "Montreux",
     picture: "",
     sexe: "M",
@@ -83,7 +83,7 @@ let users = [
     name: "Eric",
     lastName: "Rouviere",
     picture: "",
-    sexe: "",
+    sexe: "M",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -99,11 +99,11 @@ let users = [
     name: "Sabine",
     lastName: "Bertoneri",
     picture: "",
-    sexe: "",
+    sexe: "F",
     bio: "J'adore les animaux la nature et coder...", //petit slogan en une phrase
     phone: "06.79.53.32.81",
     city: "Miramas",
-    github: "Binou05",
+    github: "https://github.com/Binou05",
     slack: "Sabine Bertoneri",
     discord: "Sabine",
     whatsapp: "",
@@ -115,7 +115,7 @@ let users = [
     name: "Frédéric",
     lastName: "Galliné",
     picture: "",
-    sexe: "Homme",
+    sexe: "M",
     bio: "Less is more",
     phone: "0676072663",
     city: "Miramas",
@@ -131,13 +131,13 @@ let users = [
     name: "Karine",
     lastName: "RANDY",
     picture: "",
-    sexe: "Femme",
+    sexe: "F",
     bio: "Je ne veux pas participer à ce modèle de société qui a donné à l'argent plus d'importance qu'à la vie. Je suis ici-bas pour vivre, je ne suis pas ici pour augmenter le produit national brut.",
     phone: "0622742925",
     city: "Eyragues",
-    github: "Samikate",
+    github: "https://github.com/Samikate",
     slack: "Samikate",
-    discord: "Samikate",
+    discord: "https://discordapp.com/users/Samikate",
     whatsapp: "https://wa.me/33622742925",
     twitter: "",
     instagram: "",
@@ -147,13 +147,13 @@ let users = [
     name: "Fontaine",
     lastName: "geoffroy",
     picture: "",
-    sexe: "Homme",
+    sexe: "M",
     bio: "geek for ever", //petit slogan en une phrase
     phone: "0698047213",
     city: "Nice",
-    github: "hgeoffont",
+    github: "https://github.com/hgeoffont",
     slack: "Geoffroy Fontaine",
-    discord: "geoffroy",
+    discord: "https://discordapp.com/users/geoffroy",
     whatsapp: "",
     twitter: "",
     instagram: "",
@@ -163,7 +163,7 @@ let users = [
     name: "Munoz",
     lastName: "Jerome",
     picture: "",
-    sexe: "Homme",
+    sexe: "M",
     bio: "Merci la vie",
     phone: "0781855626",
     city: "AVIGNON",
@@ -178,14 +178,14 @@ let users = [
     name: "Fanny",
     lastName: "Bononi",
     picture: "",
-    sexe: "Feminin",
+    sexe: "F",
     bio: "moi les bio j'aime pas ça",
     phone: "0659667475",
     city: "Marseille",
     github: "https://github.com/FannyBonnet",
     slack: "Fanny Bononi",
     discord: "Faelys#0469",
-    whatsapp: "",
+    whatsapp: "https://wa.me/33659667475",
     twitter: "",
     instagram: "",
     facebook: "Fanny Bononi",
@@ -207,10 +207,10 @@ let users = [
     userFacebook: "roland.esnay",
   },
   {
-    name: "vide",
+    name: "videlalalalaa",
     lastName: "",
     picture: "./img/test.jpg",
-    sexe: "",
+    sexe: "F",
     bio: "Envoyé par JS !!!!!",
     phone: "",
     city: "",
@@ -224,71 +224,71 @@ let users = [
   },
 ];
 
-/****** On affiche les cartes */
-
-let cards = "";
-for (let i = 0; i < users.length; i++) {
-  cards += `
+function displayCards(userCard) {
+  /****** On affiche les cartes */
+  let cards = "";
+  for (let member of userCard) {
+    cards += `
     <div class="card">
           <div class="header">
-            <div class="image jaune bleu">
-              <img src="${
-                users[i].picture ? users[i].picture : "./img/user.png"
+            <div class="image">
+              <img class="user-border" src="${
+                member.picture ? member.picture : "./img/user.png"
               }" />
             </div>
             <div class="userInfo">
-              <h2>${users[i].name} <span>${users[i].lastName} </span></h2>
-              <div class="spec">${users[i].bio}</div>
+              <h2>${member.name} <span>${member.lastName} </span></h2>
+              <div class="spec">${member.bio}</div>
             </div>
           </div>
           <div class="content">
             <div class="icon">
               ${
-                users[i].github
+                member.github
                   ? '<a href="' +
-                    users[i].github +
+                    member.github +
                     '" target="_blank"><i class="fa-brands fa-github"></i></a>'
                   : ""
               }
               ${
-                users[i].facebook
+                member.facebook
                   ? '<a href="' +
-                    users[i].facebook +
+                    member.facebook +
                     '" target="_blank"><i class="fa-brands fa-facebook"></i></a>'
                   : ""
               }
               ${
-                users[i].twitter
+                member.twitter
                   ? '<a href="' +
-                    users[i].twitter +
+                    member.twitter +
                     '" target="_blank"><i class="fa-brands fa-twitter"></i></a>'
                   : ""
               }
               ${
-                users[i].instagram
+                member.instagram
                   ? '<a href="' +
-                    users[i].instagram +
+                    member.instagram +
                     '" target="_blank"><i class="fa-brands fa-instagram"></i></a>'
                   : ""
               }
               ${
-                users[i].discord
+                member.discord
                   ? '<a href="' +
-                    users[i].discord +
+                    member.discord +
                     '" target="_blank"><i class="fa-brands fa-discord"></i></a>'
                   : ""
               }
               ${
-                users[i].slack
+                member.slack
                   ? '<a href="' +
-                    users[i].slack +
+                    member.slack +
                     '" target="_blank"><i class="fa-brands fa-slack"></i></a>'
                   : ""
               }
               ${
-                users[i].whatsapp
+                member.whatsapp
                   ? '<a href="' +
-                    users[i].whatsapp +
+                    member.whatsapp +
                     '" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>'
                   : ""
               }
@@ -296,6 +296,62 @@ for (let i = 0; i < users.length; i++) {
           </div>
       </div>
   `;
-}
+  }
+  document.getElementById("cards").innerHTML = cards;
+  let border = document.querySelector(".user-border");
+  border.style.backgroundColor = "blue";
 
-document.getElementById("cards").innerHTML = cards;
+}
+displayCards(users);
+
+console.log(users);
+
+/* Border sexe */
+
+/* Trier de A à Z */
+const triAz = document.querySelector(".triAz");
+triAz.addEventListener("click", function (event) {
+  event.preventDefault();
+  let userAz = users.sort((a, b) => (a.name > b.name ? 1 : -1));
+  console.log(userAz);
+  displayCards(userAz);
+});
+
+/* Trier de Z à A */
+const triZa = document.querySelector(".triZa");
+triZa.addEventListener("click", function (event) {
+  event.preventDefault();
+  let userZa = users.sort((a, b) => (a.name < b.name ? 1 : -1));
+  console.log(userZa);
+  displayCards(userZa);
+});
+
+/* Trier de Femme */
+const venus = document.querySelector(".venus");
+venus.addEventListener("click", function (event) {
+  event.preventDefault();
+  //on tri par alphabetique
+  let userVenus = users.sort((a, b) => (a.sexe > b.sexe ? 1 : -1));
+  // Si c'est une Femme
+  var lessMars = 0;
+
+  userVenus = userVenus.filter((user) => user.sexe === "F");
+
+  console.log(userVenus);
+  displayCards(userVenus);
+});
+
+/* Trier de Homme */
+const mars = document.querySelector(".mars");
+mars.addEventListener("click", function (event) {
+  event.preventDefault();
+  let userMars = users.sort((a, b) => (a.sexe < b.sexe ? 1 : -1));
+  // Si c'est un Homme
+  var lessVenus = 0;
+  document.querySelector(".user-border").style.backgroundColor = "blue";
+  userMars = userMars.filter((user) => user.sexe === "M");
+
+  console.log(userMars);
+  displayCards(userMars);
+});
+

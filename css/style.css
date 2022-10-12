@@ -23,7 +23,7 @@
 body {
   background-color: #f5f5f5;
   font-family: "Kumbh Sans", sans-serif;
-  background-image: url(./img/bg-1.png);
+  background-image: url(../img/bg-1.png);
 }
 
 header {
@@ -33,7 +33,7 @@ header {
   top: 0px;
   margin: auto;
   width: 100%;
-  background-color: #0d0d0d;
+  background-color: #0d0d0dea;
   z-index: 1;
 }
 
@@ -86,7 +86,7 @@ nav .menu .logo {
 }
 
 nav .menu .burger {
-  justify-self: end;
+  justify-self: start;
   font-size: 1.4rem;
   align-self: center;
   justify-content: center;
@@ -101,38 +101,74 @@ nav .menu .burger:active {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
+
+/****        MENU POPUP        ****/
 
 nav .menuItems {
-  display: none;
-  justify-self: flex-end;
-  background-color: #0d0d0d;
-  width: 200px;
-  text-align: right;
-  padding: 10px;
+  display: flex;
+  visibility: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-self: flex-start;
+  background-color: #0d0d0dcb;
+  backdrop-filter: blur(8px);
+  width: 300px;
+  text-align: left;
+  padding: 10px 20px;
   border-radius: 5px;
   margin-top: 10px;
-  animation: fadeIn 1s;
+  animation: fadeIn 2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+nav .menuItems:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
 nav .menuItems li {
   list-style-type: none;
-  line-height: 1.4rem;
+  line-height: 2rem;
 }
 
-nav .menuItems li a{
+nav .menuItems li b {
+  line-height: 1rem;
+  width: 100%;
+}
+
+nav .menuItems .separator {
+  height: 1px;
+  width: 100px;
+  margin: 8px 0;
+  background-color: #dfe3eb;
+}
+
+nav .menuItems li a {
   text-decoration: none;
   color: rgb(191, 191, 191);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+nav .menuItems li a i {
+  margin-right: 10px;
 }
 
-nav .menuItems li a:hover{
+nav .menuItems li a:hover {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -172,6 +208,10 @@ div.card:hover {
   transform: scale(105%);
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .card .header {
   padding: 10px;
   display: flex;
@@ -206,7 +246,10 @@ div.card img {
   border-radius: 50px;
   height: 50px;
   width: 50px;
-  border: 2px rgb(255, 255, 255) solid;
+}
+
+img.user-border{
+  border: 4px rgb(193, 135, 192) solid;
 }
 
 .card .content {
