@@ -82,7 +82,7 @@ let users = [
   {
     name: "Eric",
     lastName: "Rouviere",
-    picture: "",
+    picture: "./img/Eric-Rouviere.png",
     sexe: "M",
     bio: "Envoyé par JS !!!!!",
     phone: "",
@@ -114,7 +114,7 @@ let users = [
   {
     name: "Frédéric",
     lastName: "Galliné",
-    picture: "",
+    picture: "./img/Frederic-Galline.png",
     sexe: "M",
     bio: "Less is more",
     phone: "0676072663",
@@ -130,7 +130,7 @@ let users = [
   {
     name: "Karine",
     lastName: "RANDY",
-    picture: "",
+    picture: "./img/Karine-Randy.png",
     sexe: "F",
     bio: "Je ne veux pas participer à ce modèle de société qui a donné à l'argent plus d'importance qu'à la vie. Je suis ici-bas pour vivre, je ne suis pas ici pour augmenter le produit national brut.",
     phone: "0622742925",
@@ -146,7 +146,7 @@ let users = [
   {
     name: "Fontaine",
     lastName: "geoffroy",
-    picture: "",
+    picture: "./img/Geoffroy-Fontaine.png",
     sexe: "M",
     bio: "geek for ever", //petit slogan en une phrase
     phone: "0698047213",
@@ -177,7 +177,7 @@ let users = [
   {
     name: "Fanny",
     lastName: "Bononi",
-    picture: "",
+    picture: "./img/Fanny-Bonomi.png",
     sexe: "F",
     bio: "moi les bio j'aime pas ça",
     phone: "0659667475",
@@ -193,7 +193,7 @@ let users = [
   {
     name: "Roland",
     lastName: "Esnay",
-    picture: "",
+    picture: "./img/Roland-Esnay.png",
     sexe: "M",
     bio: "Envoyé par JS !!!!!",
     phone: "06.25.01.68.03",
@@ -303,8 +303,6 @@ function displayCards(userCard) {
 displayCards(users);
 
 //console.log(users);
-
-/* Border sexe */
 
 /* Trier de A à Z */
 const triAz = document.querySelector(".triAz");
