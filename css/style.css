@@ -248,8 +248,16 @@ div.card img {
   width: 50px;
 }
 
-img.user-border{
+.user-image {
+  border: 4px rgb(97, 164, 105) solid;
+}
+
+img.venus {
   border: 4px rgb(193, 135, 192) solid;
+}
+
+img.mars {
+  border: 4px rgb(151, 142, 213) solid;
 }
 
 .card .content {

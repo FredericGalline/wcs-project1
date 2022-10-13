@@ -227,14 +227,15 @@ let users = [
 function displayCards(userCard) {
   /****** On affiche les cartes */
   let cards = "";
-  for (let member of userCard) {
+  for (let [index, member] of userCard.entries()) {
+    console.log(index);
     cards += `
     <div class="card">
           <div class="header">
             <div class="image">
-              <img class="user-border" src="${
-                member.picture ? member.picture : "./img/user.png"
-              }" />
+              <img class="user-image ${
+                member.sexe === "F" ? "venus" : "mars"
+              }" src="${member.picture ? member.picture : "./img/user.png"}" />
             </div>
             <div class="userInfo">
               <h2>${member.name} <span>${member.lastName} </span></h2>
@@ -298,13 +299,10 @@ function displayCards(userCard) {
   `;
   }
   document.getElementById("cards").innerHTML = cards;
-  let border = document.querySelector(".user-border");
-  border.style.backgroundColor = "blue";
-
 }
 displayCards(users);
 
-console.log(users);
+//console.log(users);
 
 /* Border sexe */
 
@@ -333,7 +331,6 @@ venus.addEventListener("click", function (event) {
   //on tri par alphabetique
   let userVenus = users.sort((a, b) => (a.sexe > b.sexe ? 1 : -1));
   // Si c'est une Femme
-  var lessMars = 0;
 
   userVenus = userVenus.filter((user) => user.sexe === "F");
 
@@ -347,11 +344,8 @@ mars.addEventListener("click", function (event) {
   event.preventDefault();
   let userMars = users.sort((a, b) => (a.sexe < b.sexe ? 1 : -1));
   // Si c'est un Homme
-  var lessVenus = 0;
-  document.querySelector(".user-border").style.backgroundColor = "blue";
   userMars = userMars.filter((user) => user.sexe === "M");
 
   console.log(userMars);
   displayCards(userMars);
 });
-
