@@ -228,7 +228,7 @@ function displayCards(userCard) {
   /****** On affiche les cartes */
   let cards = "";
   for (let [index, member] of userCard.entries()) {
-    console.log(index);
+    //console.log(index);
     cards += `
     <div class="card">
           <div class="header">

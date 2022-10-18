@@ -1,0 +1,23 @@
+/*
+
+*/
+
+:root {
+  --body-lg-width: 800px;
+  --background-color: #e3e4d4;
+  --color-primary: #67733D;
+  --color-secondary: #e5ede2;
+  --accent-color: #909e5f;
+  --card-background-color: #cdd9c7;
+  --dark-color: #042326;
+  --border-radius: 15px;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background : url(../img/bg-green.jpg)no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

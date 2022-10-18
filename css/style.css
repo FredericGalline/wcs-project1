@@ -16,24 +16,30 @@
 
 :root {
   --body-lg-width: 800px;
+  --background-color: #f2f2f2;
+  --color-primary: #595859;
+  --color-secondary: #595859;
+  --accent-color: #8c8c8c;
+  --card-background-color: #bfb9ae;
+  --dark-color:#262526;
+  --border-radius: 5px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 
 body {
-  background-color: #f5f5f5;
+  background-color: var(--background-color);
   font-family: "Kumbh Sans", sans-serif;
-  background-image: url(../img/bg-1.png);
 }
 
 header {
   display: flex;
-  justify-content: center;
   position: sticky;
+  justify-content: center;
   top: 0px;
   margin: auto;
   width: 100%;
-  background-color: #0d0d0dea;
+  background-color: var(--color-primary);
   z-index: 1;
 }
 
@@ -47,11 +53,10 @@ footer {
 
 h1 {
   font-size: 4rem;
-  margin: 4rem 0 2rem 0;
+  margin: 4rem 0 0rem 0;
   font-weight: bolder;
   letter-spacing: -5px;
-  color: #fff;
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: var(--color-primary);
 }
 
 h2 {
@@ -59,9 +64,13 @@ h2 {
   color: #fff;
 }
 
+.title h2 {
+  padding-left: 94px;
+}
+
 /*** Navigation ***/
 nav {
-  color: #bfcdd9;
+  color: var(--background-color);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -78,10 +87,12 @@ nav .menu {
   align-items: center;
   justify-content: space-between;
   width: var(--body-lg-width);
+  height: 3rem;
 }
 
 nav .menu .logo {
   justify-self: start;
+  align-items: center;
   font-size: 1rem;
   margin-right: 20px;
 }
@@ -128,12 +139,12 @@ nav .menuItems {
   flex-wrap: wrap;
   gap: 3rem;
   justify-self: flex-start;
-  background-color: #0d0d0dcb;
+  background-color: var(--dark-color);
   backdrop-filter: blur(8px);
   width: 300px;
   text-align: left;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   margin-top: 10px;
   animation: fadeIn 2s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -151,25 +162,26 @@ nav .menuItems li {
 nav .menuItems li b {
   line-height: 1rem;
   width: 100%;
+  color: var(--color-primary);
 }
 
 nav .menuItems .separator {
   height: 1px;
   width: 100px;
   margin: 8px 0;
-  background-color: #dfe3eb;
+  background-color: var(--color-primary);
 }
 
-nav .menuItems li a {
+nav .menuItems li {
   text-decoration: none;
-  color: rgb(191, 191, 191);
+  color: var(--accent-color);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-nav .menuItems li a i {
+nav .menuItems li i {
   margin-right: 10px;
 }
 
-nav .menuItems li a:hover {
+nav .menuItems li:hover {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -182,9 +194,8 @@ section .title {
 }
 
 section.title h2 {
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   padding-bottom: 2rem;
-  opacity: 60%;
+  color: var(--color-primary);
 }
 
 /** card **/
@@ -196,13 +207,14 @@ section#cards {
 }
 
 section#cards .card {
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 2%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
+  color: var(--accent-color);
 }
 
 div.card:hover {
@@ -216,14 +228,15 @@ div.card:hover {
 .card .header {
   padding: 10px;
   display: flex;
-  background-color: #fff;
-  border-radius: 5px 5px 0 0;
+  background: var(--card-background-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   height: auto;
   align-self: stretch;
 }
 
 div.image {
   width: 50px;
+  margin-right:10px;
 }
 
 div.userInfo {
@@ -232,11 +245,11 @@ div.userInfo {
 
 div.userInfo h2 {
   font-size: 1.2rem;
-  color: #777777;
+  color: var(--color-primary);
 }
 div.userInfo h2 span {
   font-size: 1rem;
-  color: #a9a9a9;
+  color: var(--accent-color);
 }
 
 div.userInfo .spec {
@@ -262,13 +275,14 @@ img.mars {
 }
 
 .card .content {
-  background-color: rgba(255, 255, 255, 0.019);
+  background: var(--card-background-color);
   padding: 10px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   backdrop-filter: blur(3px);
   box-shadow: inset 0 -3px 20px rgba(255, 255, 255, 0.047), 0 0 0 0px;
   align-self: flex-end;
   width: 92%;
+  border-top: var(--color-primary) 1px solid;
 }
 
 div .icon {
@@ -278,7 +292,7 @@ div .icon {
 }
 
 div .icon i {
-  color: #adadad;
+  color: var(--accent-color);
   margin: 0 5px;
 }
 
@@ -286,7 +300,6 @@ div .icon i:hover {
   color: #fff;
   margin: 0 5px;
   transition: 0s 100ms ease-in-out;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 /*** FOOTER ***/
