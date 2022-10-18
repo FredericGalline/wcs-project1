@@ -21,7 +21,7 @@
   --color-secondary: #595859;
   --accent-color: #8c8c8c;
   --card-background-color: #bfb9ae;
-  --dark-color:#262526;
+  --dark-color: #262526;
   --border-radius: 5px;
 }
 
@@ -236,7 +236,7 @@ div.card:hover {
 
 div.image {
   width: 50px;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
 div.userInfo {

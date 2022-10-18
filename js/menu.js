@@ -8,7 +8,6 @@ menuBurger.addEventListener("mouseleave", function () {
   menuBurger.style.visibility = "hidden";
 });
 
-
 /* template glassMorphism */
 const glassMorphism = document.querySelector(".glassMorphism");
 glassMorphism.addEventListener("click", function (event) {
