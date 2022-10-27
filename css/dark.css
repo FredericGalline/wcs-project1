@@ -1,21 +1,26 @@
 /*
-
+    .___             __    
+  __| _/____ _______|  | __
+ / __ |\__  \\_  __ \  |/ /
+/ /_/ | / __ \|  | \/    < 
+\____ |(____  /__|  |__|_ \
+     \/     \/           \/
 */
 
 :root {
   --body-lg-width: 800px;
-  --background-color: #010C0D;
+  --background-color: #010c0d;
   --color-primary: #4f5954;
   --color-secondary: #fff;
   --accent-color: #878c80;
-  --card-background-color: #0B2326;
-  --dark-color: #010C0D;
+  --card-background-color: #0b2326;
+  --dark-color: #010c0d;
   --border-radius: 3px;
 }
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  background : url(../img/bg-dark.jpg)no-repeat center center fixed; 
+  background: url(../img/bg-dark.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
