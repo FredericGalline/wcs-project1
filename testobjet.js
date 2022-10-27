@@ -23,3 +23,5 @@ var adresseMistral = new Adresse("4 ue Léon Gozlan", "Marseille", "13001");
 
 var batimentMistral = new Batiment("Mistral", "1234567", "001", adresseMistral);
 console.log(batimentMistral);
+
+
