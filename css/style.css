@@ -390,7 +390,7 @@ footer {
 @media screen and (max-width: 390px) {
   header {
     margin: auto;
-    width: 94%;
+    width: 100%;
   }
 
   main,
@@ -443,6 +443,10 @@ footer {
 
   div.card:hover {
     transform: scale(1.05);
+  }
+
+  .card .content {
+    width: 96%;
   }
 
   footer {
