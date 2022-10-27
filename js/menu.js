@@ -2,7 +2,7 @@ const menuBurger = document.querySelector(".menuItems");
 const burger = document.querySelector(".menu-burger");
 
 burger.addEventListener("click", function () {
-  //menuBurger.classList.toggle("visible");
+  menuBurger.classList.toggle("visible");
   menuBurger.classList.toggle("hidden");
 
   menuBurger.classList.toggle("fadein");
