@@ -4,7 +4,7 @@ let users = [
     lastName: "Leschira",
     picture: "",
     sexe: "M",
-    bio: "Il faut viser la lune, parce qu'au moins, si vous échouez, vous finirez dans les étoiles - Oscar Wilde", //petit slogan en une phrase
+    bio: "Il faut viser la lune, parce qu'au moins, si vous échouez, vous finirez dans les étoiles", //petit slogan en une phrase
     phone: "0610025866",
     city: "BEAUCAIRE 30300",
     github: "https://github.com/fredl2tp",
@@ -132,7 +132,7 @@ let users = [
     lastName: "RANDY",
     picture: "./img/Karine-Randy.png",
     sexe: "F",
-    bio: "Je ne veux pas participer à ce modèle de société qui a donné à l'argent plus d'importance qu'à la vie. Je suis ici-bas pour vivre, je ne suis pas ici pour augmenter le produit national brut.",
+    bio: "Nous vivons trop dans les livres et pas assez dans la nature",
     phone: "0622742925",
     city: "Eyragues",
     github: "https://github.com/Samikate",
@@ -347,4 +347,3 @@ mars.addEventListener("click", function (event) {
   console.log(userMars);
   displayCards(userMars);
 });
-/* refuck */

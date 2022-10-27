@@ -1,13 +1,16 @@
 const menuBurger = document.querySelector(".menuItems");
-const burger = document.querySelector(".burger");
-burger.addEventListener("mouseover", function () {
-  menuBurger.style.visibility = "visible";
+const burger = document.querySelector(".menu-burger");
+
+burger.addEventListener("click", function () {
+  menuBurger.style.visibility =
+    menuBurger.style.visibility === "hidden" ? "visible" : "hidden";
 });
 
+/*
 menuBurger.addEventListener("mouseleave", function () {
   menuBurger.style.visibility = "hidden";
 });
-
+*/
 /* template glassMorphism */
 const glassMorphism = document.querySelector(".glassMorphism");
 glassMorphism.addEventListener("click", function (event) {
@@ -47,4 +50,3 @@ starWars.addEventListener("click", function (event) {
   event.preventDefault();
   document.getElementById("theme_css").href = "./css/starwars.css";
 });
-/* fuck !!!*/
