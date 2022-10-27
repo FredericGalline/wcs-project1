@@ -2,8 +2,11 @@ const menuBurger = document.querySelector(".menuItems");
 const burger = document.querySelector(".menu-burger");
 
 burger.addEventListener("click", function () {
-  menuBurger.style.visibility =
-    menuBurger.style.visibility === "hidden" ? "visible" : "hidden";
+  //menuBurger.classList.toggle("visible");
+  menuBurger.classList.toggle("hidden");
+
+  menuBurger.classList.toggle("fadein");
+  menuBurger.classList.toggle("fadeout");
 });
 
 /*
@@ -11,6 +14,7 @@ menuBurger.addEventListener("mouseleave", function () {
   menuBurger.style.visibility = "hidden";
 });
 */
+
 /* template glassMorphism */
 const glassMorphism = document.querySelector(".glassMorphism");
 glassMorphism.addEventListener("click", function (event) {
