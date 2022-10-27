@@ -9,6 +9,8 @@
  
                                       */
 
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +26,6 @@
   --dark-color: #262526;
   --border-radius: 5px;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 
 body {
   background-color: var(--background-color);
