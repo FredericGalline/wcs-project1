@@ -372,7 +372,7 @@ footer {
   }
 
   div.card:hover {
-    transform: scale(104%);
+    transform: scale(1.04);
   }
 
   footer {
@@ -442,7 +442,7 @@ footer {
   }
 
   div.card:hover {
-    transform: scale(104%);
+    transform: scale(1.05);
   }
 
   footer {
