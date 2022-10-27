@@ -347,3 +347,4 @@ mars.addEventListener("click", function (event) {
   console.log(userMars);
   displayCards(userMars);
 });
+/* refuck */

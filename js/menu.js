@@ -47,3 +47,4 @@ starWars.addEventListener("click", function (event) {
   event.preventDefault();
   document.getElementById("theme_css").href = "./css/starwars.css";
 });
+/* fuck !!!*/
