@@ -49,7 +49,7 @@ footer {
   width: var(--body-lg-width);
 }
 
-/*** GENERAL ***/
+/***  GENERAL  ***/
 
 h1 {
   font-size: 4rem;
@@ -68,7 +68,7 @@ h2 {
   padding-left: 94px;
 }
 
-/*** Navigation ***/
+/***  Navigation  ***/
 nav {
   color: var(--background-color);
   display: flex;
