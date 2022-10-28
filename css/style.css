@@ -296,7 +296,7 @@ div.card:hover {
   display: flex;
   background: var(--card-background-color);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  height: auto;
+  height: 80px;
   align-self: stretch;
 }
 
@@ -517,6 +517,6 @@ footer {
   }
 
   footer {
-    padding: 20px 0 20px;
+    padding: 60px 0 20px;
   }
 }
