@@ -72,13 +72,14 @@ h2 {
 nav {
   color: var(--background-color);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   position: sticky;
   height: 3rem;
   width: var(--body-lg-width);
+  align-content: center;
+  flex-direction: row;
 }
 
 nav .menu {
@@ -163,7 +164,14 @@ nav .menu-burger {
 
 /****        MENU POPUP        ****/
 
-nav .menuItems {
+div.menu-box {
+  position: fixed;
+  top: 50px;
+  z-index: 5;
+  right: 10%;
+}
+
+.menuItems {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -173,7 +181,7 @@ nav .menuItems {
   backdrop-filter: blur(8px);
   width: 300px;
   text-align: left;
-  padding: 10px 20px;
+  padding: 10px 20px 20px;
   border-radius: var(--border-radius);
   margin-top: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -217,7 +225,7 @@ nav .menuItems {
   animation: fadeOut 1s;
 }
 
-nav .menuItems:hover {
+.menuItems:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 nav .menuItems li {
@@ -225,29 +233,30 @@ nav .menuItems li {
   line-height: 2rem;
 }
 
-nav .menuItems li b {
+.menuItems li b {
   line-height: 1rem;
   width: 100%;
   color: var(--color-primary);
 }
 
-nav .menuItems .separator {
+.menuItems .separator {
   height: 1px;
   width: 100px;
   margin: 8px 0;
   background-color: var(--color-primary);
 }
 
-nav .menuItems li {
+.menuItems li {
   text-decoration: none;
+  list-style: none;
   color: var(--accent-color);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-nav .menuItems li i {
+.menuItems li i {
   margin-right: 10px;
 }
 
-nav .menuItems li:hover {
+.menuItems li:hover {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -385,7 +394,13 @@ footer {
 @media screen and (max-width: 830px) and (min-width: 390px) {
   header {
     margin: auto;
-    width: 94%;
+    width: 100%;
+  }
+
+  div.menu-box {
+    top: 50px;
+    z-index: 5;
+    right: 5%;
   }
 
   main,
@@ -441,6 +456,10 @@ footer {
     transform: scale(1.04);
   }
 
+  .card .content {
+    width: 96%;
+  }
+
   footer {
     padding: 20px 0 20px;
     width: 50px;
@@ -457,7 +476,7 @@ footer {
   header {
     margin: auto;
     width: 100%;
-    height:30;
+    height: 30;
   }
 
   main,
@@ -465,6 +484,7 @@ footer {
     margin: auto;
     width: 94%;
   }
+
   h1 {
     font-size: 2rem;
     margin: 1rem 0 0 0;
@@ -476,12 +496,30 @@ footer {
     font-size: 1rem;
   }
 
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    width: 90%;
+    padding-bottom: 20px;
+    gap: 1rem;
+  }
+
   nav .menu {
     width: 100%;
     display: flex;
     flex-direction: row;
     margin: 2%;
     padding-left: 2%;
+  }
+
+  div.menu-box {
+    top: 50px;
+    z-index: 5;
+    right: 15%;
+    padding-bottom: 20px;
   }
 
   main {
