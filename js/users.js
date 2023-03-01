@@ -72,7 +72,7 @@ let users = [
     phone: "0620813702",
     city: "Roquemaure",
     github: "https://github.com/Christophe-76",
-    slack: "christophe.mortreux@sncf.fr",
+    slack: "",
     discord: "Christophe#5389",
     whatsapp: "",
     twitter: "",
